@@ -1,0 +1,100 @@
+body {
+  font-family: sans-serif;
+  background: #87ceeb;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+.info {
+  margin-top: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+#game {
+  position: relative;
+  margin: 20px auto;
+  width: 600px;
+  height: 200px;
+  overflow: hidden;
+  border: 3px solid #333;
+  background: linear-gradient(#87ceeb 0%, #cfefff 40%, #d2b48c 100%);
+}
+
+/* Simple “Himalaya” mountains background */
+#background::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background:
+    linear-gradient(135deg, transparent 60%, #ffffff 60%) 0 40px / 200px 120px repeat-x,
+    linear-gradient(225deg, transparent 60%, #ffffff 60%) 100px 20px / 200px 120px repeat-x;
+  opacity: 0.8;
+}
+
+/* Player (climber) */
+#player {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  width: 30px;
+  height: 40px;
+  background: #e63946;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px #1d3557 inset;
+}
+
+/* Ground */
+#game::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #654321;
+}
+
+/* Rock obstacle */
+#obstacle {
+  position: absolute;
+  bottom: 40px;
+  right: -40px;
+  width: 30px;
+  height: 30px;
+  background: #444;
+  border-radius: 4px;
+}
+
+/* Nepali flag (simplified) */
+#flag {
+  position: absolute;
+  bottom: 100px;
+  right: -40px;
+  width: 20px;
+  height: 30px;
+  background: #d90429;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%, 50% 50%, 0 100%);
+}
+
+.hud {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#restart {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
